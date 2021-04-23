@@ -9,4 +9,4 @@ git push
 ssh 35.247.228.10 \
   'git -C /home/rob/api/' \
   'pull origin master && ' \
-  'pm2 restart api && sudo systemctl restart nginx'
+  'pm2 restart app && sudo systemctl restart nginx'
