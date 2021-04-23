@@ -17,6 +17,7 @@ import fotoRoutes from './routes/fotoRoutes';
 
 const whiteList = [
   'http://localhost:3005',
+  'https://pt.wikipedia.org',
 ];
 
 const corsOptions = {

@@ -17,6 +17,7 @@ var _fotoRoutes = require('./routes/fotoRoutes'); var _fotoRoutes2 = _interopReq
 
 const whiteList = [
   'http://localhost:3005',
+  'https://pt.wikipedia.org',
 ];
 
 const corsOptions = {
