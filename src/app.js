@@ -15,13 +15,6 @@ import tokenRoutes from './routes/tokenRoutes';
 import alunoRoutes from './routes/alunoRoutes';
 import fotoRoutes from './routes/fotoRoutes';
 
-this.app.use((req, res, next) => {
-  res.header('Access-Control-Allow-Origin', '*'); // update to match the domain you will make the request from
-  res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
-  next();
-});
-
-
 const whiteList = [
   'http://35.247.228.10/',
   'http://localhost:3005',
@@ -47,6 +40,11 @@ class App {
   }
 
   middlewares() {
+    this.app.use((req, res, next) => {
+      res.header('Access-Control-Allow-Origin', '*'); // update to match the domain you will make the request from
+      res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
+      next();
+    });
     this.app.use(cors(corsOptions));
     this.app.use(helmet());
     this.app.use(express.urlencoded({ extended: true }));
