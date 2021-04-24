@@ -19,6 +19,7 @@ const whiteList = [
   'http://35.247.228.10/',
   'http://localhost:3005',
   'http://localhost:3000',
+  'localhost:3000',
   '*',
 ];
 
