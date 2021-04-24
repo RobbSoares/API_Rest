@@ -17,9 +17,7 @@ import fotoRoutes from './routes/fotoRoutes';
 
 const whiteList = [
   'http://35.247.228.10/',
-  'http://localhost:3005',
   'http://localhost:3000',
-  'localhost:3000',
   '*',
 ];
 
@@ -41,11 +39,11 @@ class App {
   }
 
   middlewares() {
-    this.app.use((req, res, next) => {
-      res.header('Access-Control-Allow-Origin', 'http://localhost:3000'); // update to match the domain you will make the request from
-      res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
-      next();
-    });
+//    this.app.use((req, res, next) => {
+//      res.header('Access-Control-Allow-Origin', 'http://localhost:3000'); // update to match the domain you will make the request from
+//      res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
+//      next();
+//    });
     this.app.use(cors(corsOptions));
     this.app.use(helmet());
     this.app.use(express.urlencoded({ extended: true }));
